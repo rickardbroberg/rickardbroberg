@@ -8,6 +8,11 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import Vuetify from 'vuetify'
+
+Vue.use(Vuetify)
+
 import AppLogo from '~/components/AppLogo.vue'
 import Header from '~/components/Header.vue'
 
