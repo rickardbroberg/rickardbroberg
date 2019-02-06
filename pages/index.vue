@@ -13,6 +13,8 @@ import Vuetify from 'vuetify'
 
 Vue.use(Vuetify)
 
+import 'vuetify/dist/vuetify.min.css'
+
 import AppLogo from '~/components/AppLogo.vue'
 import Header from '~/components/Header.vue'
 
