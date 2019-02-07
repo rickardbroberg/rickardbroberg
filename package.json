@@ -13,9 +13,11 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@mdi/font": "^3.4.93",
     "css-loader": "^2.1.0",
     "material-design-icons-iconfont": "^4.0.4",
     "nuxt": "^2.0.0",
+    "vue-instagram": "^2.0.1",
     "vuetify": "^1.5.0"
   },
   "devDependencies": {

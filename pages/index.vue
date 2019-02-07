@@ -1,7 +1,7 @@
 <template>
   <section class="">
     <div>
-      <vheader/>
+      <vheader v-bind="header"/>
       <section class="container">
 
       </section>
@@ -24,7 +24,11 @@ import Vfooter from '~/components/VFooter.vue'
 export default {
   data: function(){
     return {
-      pageTitle: 'Rickard Broberg - Fitness athlete'
+      header: {
+        title: 'Rickard Broberg',
+        subheading: 'An fitness Athlete',
+        image: 'header.jpg'
+      },
     }
   },
   components: {
