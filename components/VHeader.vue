@@ -73,6 +73,7 @@ export default {
       { title: 'Start', icon: 'home', url: '/' },
       { title: 'Träningstips', icon: 'question_answer', url: 'traningstips' },
       { title: 'Kostråd', icon: 'question_answer', url: 'kostrad' },
+      { title: 'Bio', icon: 'question_answer', url: 'om' },
       { title: 'Instagram', icon: 'question_answer', url: 'https://www.instagram.com/rickardbroberg' },
     ],  
     drawer: {
