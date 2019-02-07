@@ -24,7 +24,7 @@ import Vfooter from '~/components/VFooter.vue'
 export default {
   data: function(){
     return {
-      pageTitle: 'Rickard Broberg - Fitness athlete'
+      pageTitle: 'Mina kost tips'
     }
   },
   components: {
