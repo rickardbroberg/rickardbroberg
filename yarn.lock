@@ -6999,6 +6999,13 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-burger-menu@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-burger-menu/-/vue-burger-menu-2.0.0.tgz#c7b1b2c8c4d9eb2553aef291db0fdc064c639cce"
+  integrity sha512-d4cKgeiWu7NA9IXdZd43hzSmpwWVUc/Lr3K8hT/b/I2F30f62D/zTZ/wRQy2s3f3TAOSPbYY9rsrY6lllJUxcw==
+  dependencies:
+    vue "^2.5.17"
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
@@ -7089,6 +7096,11 @@ vue-template-es2015-compiler@^1.8.2:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.8.2.tgz#dd73e80ba58bb65dd7a8aa2aeef6089cf6116f2a"
   integrity sha512-cliV19VHLJqFUYbz/XeWXe5CO6guzwd0yrrqqp0bmjlMP3ZZULY7fu8RTC4+3lmHwo6ESVDHFDsvjB15hcR5IA==
+
+vue@^2.5.17:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.3.tgz#180017ba25b94a9864b2921db8644e1062ea82a0"
+  integrity sha512-yftjtahz4UTAtOlXXuw7UaYD86fWrMDAAzqTdqJJx2FIBqcPmBN6kPBHiBJFGaQELVblb5ijbFMXsx0i0F7q3g==
 
 vue@^2.5.22:
   version "2.6.2"

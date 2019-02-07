@@ -1,20 +1,57 @@
 <template>
   <div class="head">
-    <v-toolbar dark>
-        <v-toolbar-side-icon></v-toolbar-side-icon>
-        <v-toolbar-title>{{ pageTitle }}</v-toolbar-title>
+  <v-navigation-drawer
+      :clipped="drawer.clipped"
+      :fixed="drawer.fixed"
+      v-model="drawer.open"
+      app
+      dark
+    >
+      <v-list>
+
+        <v-list-tile
+        v-for="item in items"
+        :key="item.title"
+        :href="item.url"
+      >
+        <v-list-tile-action>
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-list-tile-action>
+
+        <v-list-tile-content>
+          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+
+
+
+
+      </v-list>
+    </v-navigation-drawer>
+    
+    <v-toolbar
+      app
+      dark
+      :fixed="toolbar.fixed"
+      :clipped-left="toolbar.clippedLeft"
+    >
+      <v-toolbar-side-icon 
+        @click.stop="toggleDrawer"
+      ></v-toolbar-side-icon>
+        <v-toolbar-title>{{ title }}</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
         <v-btn href="/" flat>
             <v-icon>home</v-icon>
         </v-btn>
         <v-btn href="traningstips" flat>Träningstips</v-btn>
-        <v-btn href="kost" flat>Kost</v-btn>
+        <v-btn href="kostrad" flat>Kostråd</v-btn>
         <v-btn href="https://www.instagram.com/rickardbroberg" flat>
           <v-icon>home</v-icon>
         </v-btn>
         </v-toolbar-items>
     </v-toolbar>
+    
     <v-parallax dark height="350" :src="image">
       <v-layout
       align-center
@@ -31,7 +68,30 @@
 
 <script>
 export default {
-  props: ['image', 'title', 'subheading']
+  data: () => ({
+    items: [
+      { title: 'Start', icon: 'home', url: '/' },
+      { title: 'Träningstips', icon: 'question_answer', url: 'traningstips' },
+      { title: 'Kostråd', icon: 'question_answer', url: 'kostrad' },
+      { title: 'Instagram', icon: 'question_answer', url: 'https://www.instagram.com/rickardbroberg' },
+    ],  
+    drawer: {
+      open: false,
+      clipped: true,
+      fixed: true
+    },
+    toolbar: {
+      fixed: true,
+      clippedLeft: true
+    }
+  }),
+  props: ['image', 'title', 'subheading'],
+  methods: {
+    toggleDrawer () {
+        this.drawer.open = !this.drawer.open
+    }
+  }
+
 }
 </script>
 

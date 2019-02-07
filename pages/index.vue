@@ -2,9 +2,9 @@
   <section class="">
     <div>
       <vheader v-bind="header"/>
-      <section class="container">
+      <sidebar/>
+      
 
-      </section>
       <vfooter/>
     </div>
   </section>
