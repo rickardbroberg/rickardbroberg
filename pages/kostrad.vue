@@ -1,23 +1,14 @@
 <template>
-  <section class="">
-    <div>
-      <vheader v-bind="header"/>
-      <section class="container">
+  <div>
+    <vheader v-bind="header"/>
+    <section class="container">
 
-      </section>
-      <vfooter/>
-    </div>
-  </section>
+    </section>
+    <vfooter/>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import Vuetify from 'vuetify'
-
-Vue.use(Vuetify)
-
-import 'vuetify/dist/vuetify.min.css'
-
 import Vheader from '~/components/VHeader.vue'
 import Vfooter from '~/components/VFooter.vue'
 

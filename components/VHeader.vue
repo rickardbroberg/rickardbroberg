@@ -8,7 +8,6 @@
       dark
     >
       <v-list>
-
         <v-list-tile
         v-for="item in items"
         :key="item.title"
@@ -17,21 +16,17 @@
         <v-list-tile-action>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-tile-action>
-
         <v-list-tile-content>
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
-
-
-
-
       </v-list>
     </v-navigation-drawer>
     
     <v-toolbar
       app
       dark
+      color="grey darken-4"
       :fixed="toolbar.fixed"
       :clipped-left="toolbar.clippedLeft"
     >
@@ -42,24 +37,24 @@
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
         <v-btn href="/" flat>
-            <v-icon>home</v-icon>
+            <v-icon>fa-home</v-icon>
         </v-btn>
         <v-btn href="traningstips" flat>Träningstips</v-btn>
         <v-btn href="kostrad" flat>Kostråd</v-btn>
         <v-btn href="https://www.instagram.com/rickardbroberg" flat>
-          <v-icon>home</v-icon>
+          <v-icon>fa-instagram</v-icon>
         </v-btn>
         </v-toolbar-items>
     </v-toolbar>
     
-    <v-parallax dark height="350" :src="image">
+    <v-parallax dark height="500" :src="image">
       <v-layout
       align-center
       column
       justify-center
     >
-      <h1 class="display-2 font-weight-thin mb-3">{{ title }}</h1>
-      <h4 class="subheading">{{ subheading }}</h4>
+      <!-- <h1 class="display-2 font-weight-thin mb-3">{{ title }}</h1>
+      <h4 class="subheading">{{ subheading }}</h4> -->
     </v-layout>
     </v-parallax>
   </div>
@@ -70,11 +65,11 @@
 export default {
   data: () => ({
     items: [
-      { title: 'Start', icon: 'home', url: '/' },
-      { title: 'Träningstips', icon: 'question_answer', url: 'traningstips' },
-      { title: 'Kostråd', icon: 'question_answer', url: 'kostrad' },
-      { title: 'Bio', icon: 'question_answer', url: 'om' },
-      { title: 'Instagram', icon: 'question_answer', url: 'https://www.instagram.com/rickardbroberg' },
+      { title: 'Start', icon: 'fa-home', url: '/' },
+      { title: 'Träningstips', icon: 'fa-bomb', url: 'traningstips' },
+      { title: 'Kostråd', icon: 'fa-cutlery', url: 'kostrad' },
+      { title: 'Bio', icon: 'fa-cube', url: 'om' },
+      { title: 'Instagram', icon: 'fa-instagram', url: 'https://www.instagram.com/rickardbroberg' },
     ],  
     drawer: {
       open: false,
@@ -98,7 +93,7 @@ export default {
 
 <style>
 body{
-  background-color:#1b1b1b;
+  background-color:#212121;
   color:#eeeded;
 }
 .head {
