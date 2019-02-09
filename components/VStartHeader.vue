@@ -1,5 +1,5 @@
 <template>
-  <div class="head">
+  <div>
   <v-navigation-drawer
       :clipped="drawer.clipped"
       :fixed="drawer.fixed"
@@ -51,10 +51,33 @@
             <source src="/abs-ball-deluxe.mp4" type="video/mp4">
         </video>
     </div>
-    <div class="large-push">
-        <h1 style="text-align: left;">Rickard Broberg</h1>
-        <h2>A mens physique fitness athlete</h2>
-    </div>
+    <v-container grid-list-md text-xs-center fill-height>
+        <v-layout row wrap>  
+          
+          
+          <v-flex hero-text xs12 align-self-center>
+            <h1>Rickard Broberg</h1>
+            <h2>A mens physique fitness athlete</h2>
+          </v-flex>
+        
+
+          <v-flex v-for="item in frontboxes" :key="`4${item}`" xs12 sm12 md4>
+              <v-card :color="item.color">
+                <v-card-title primary-title>
+                  <div>
+                    <h3 class="headline mb-0">{{item.title}}</h3>
+                    <div>{{item.premble}}</div>
+                  </div>
+                </v-card-title>
+                <v-card-actions>
+                  <v-btn :href="item.url" block :color="item.btnColor">{{item.button}}</v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-flex>
+
+
+        </v-layout>
+      </v-container>
   </div>
 </template>
 
@@ -69,6 +92,32 @@ export default {
       { title: 'Bio', icon: 'fa-cube', url: 'om' },
       { title: 'Instagram', icon: 'fa-instagram', url: 'https://www.instagram.com/rickardbroberg' },
     ],  
+    frontboxes: [
+        {
+            title: 'OVER NIGHT OATS',
+            premble: 'Letar du efter en fitnessfrukost? Denna är baserad på proteinpulver och havregryn...',
+            button: 'Läs receptet',
+            url: 'kostrad',
+            color: 'grey lighten-2',
+            btnColor: 'grey lighten-1'
+        },
+        {
+            title: 'LÄR DIG GÖRA CHINS',
+            premble: 'Här får du mina bästa tips för att lära dig göra chins eller pullups...',
+            button: 'Läs mina tips',
+            url: 'traningstips',
+            color: 'grey lighten-2',
+            btnColor: 'grey lighten-1'
+        },
+        {
+            title: 'ICANIWILL',
+            premble: 'Använd min kod: RICKARDB15 så får du 15% rabatt på träningskläder hos ICANIWILL',
+            button: 'HANDLA NU',
+            url: 'https://click.adrecord.com/?c=28930&p=886',
+            color: 'grey lighten-2',
+            btnColor: 'grey lighten-1'
+        },
+    ],
     drawer: {
       open: false,
       clipped: true,
@@ -89,21 +138,9 @@ export default {
 </script>
 
 <style>
-
-@font-face {
-font-family: 'Acherus Grotesque Regular';
-font-style: normal;
-font-weight: normal;
-src: local('Acherus Grotesque Regular'), url('/assets/acherus_grotesque_-_regular.woff') format('woff');
-}
-
-body{
-  background-color:#212121;
-  color:#eeeded;
-}
 #hero{
     position: absolute;
-    top: 0;
+    top: 64px;
     left: 0;
     height: 500px;
     width: 100%;
@@ -126,24 +163,24 @@ video#bgvideo {
     background: url(/placeholder.png) no-repeat;
     background-size: cover;
 }
-.large-push{
-    position: absolute;
-    left: 12%;
-    width: 50%;
-    top:50%;
-    z-index: 9999;
-    opacity: 0.5;
+
+.hero-text{
+    margin: 28% 0 20% 0;
 }
-.large-push h1{
+
+.hero-text h1{
     font-size: 4.57143rem;
     line-height: 5.14286rem;
     letter-spacing: -.01429rem;
     word-break: initial;
     font-family:'Acherus Grotesque Regular';
+    color:#ffffff;
+
 }
-.large-push h2{
+.hero-text h2{
     font-size: 1.6rem;
     font-weight: 400;
     font-family:'Acherus Grotesque Regular';
+    color:#ffffff;
 }
 </style>

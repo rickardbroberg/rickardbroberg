@@ -2,22 +2,108 @@
     <div>
       <v-start-header/>
       <!-- <vheader v-bind="header"/> -->
-      <sidebar/>
-    
 
         <v-container grid-list-md>
-          <v-layout align-end wrap frontbox>
-            <v-flex v-for="item in frontboxes" :key="`4${item}`" xs4>
-              <v-card dark :color="item.color">
-                <v-card-title primary-title>
-                  <div>
-                    <h3 class="headline mb-0">{{item.title}}</h3>
-                    <div>{{item.premble}}</div>
-                  </div>
-                </v-card-title>
-                <v-card-actions>
-                  <v-btn :href="item.url" block :color="item.btnColor">{{item.button}}</v-btn>
-                </v-card-actions>
+          <v-layout row wrap>
+            <v-flex d-flex xs12 sm6 md6>
+              <v-card color="grey lighten-2">
+                <v-img
+                  class="white--text"
+                  src="/images/IMG_4235.JPG"
+                >
+                  <v-container fill-height fluid>
+                    <v-layout fill-height>
+                      <v-flex xs12 align-end flexbox>
+                        <span class="headline">Tävlingar</span>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-img>
+                <v-card-title primary class="title">Lorem</v-card-title>
+                <v-card-text>{{ lorem }}</v-card-text>
+              </v-card>
+            </v-flex>
+            <v-flex d-flex xs12 sm6 md6>
+              <v-layout row wrap>
+                <v-flex d-flex>
+                  <v-card color="grey lighten-2">
+                    <v-img
+                      class="white--text"
+                      src="/images/white-kit.jpg"
+                    >
+                      <v-container fill-height fluid>
+                        <v-layout fill-height>
+                          <v-flex xs12 align-end flexbox>
+                            <span class="headline">Se alla samarbeten</span>
+                          </v-flex>
+                        </v-layout>
+                      </v-container>
+                    </v-img>
+                    <!-- <v-card-text>{{ lorem.slice(0, 70) }}</v-card-text> -->
+                  </v-card>
+                </v-flex>
+                <v-flex d-flex>
+                  <v-layout row wrap>
+                    <v-flex d-flex xs12>
+                      <v-card color="grey lighten-2" >
+                        <v-img
+                          class="white--text"
+                          src="/images/IMG_5841.JPG"
+                        >
+                          <v-container fill-height fluid>
+                            <v-layout fill-height>
+                              <v-flex xs12 align-end flexbox>
+                                <span class="headline">Träningstips för nybörjare</span>
+                              </v-flex>
+                            </v-layout>
+                          </v-container>
+                        </v-img>
+                        <!-- <v-card-text>{{ lorem.slice(0, 40) }}</v-card-text> -->
+                      </v-card>
+                    </v-flex>
+                    <v-flex d-flex xs12>
+                      <v-card color="grey lighten-2">
+                        <v-card-text>{{ lorem.slice(0, 40) }}</v-card-text>
+                      </v-card>
+                    </v-flex>
+                  </v-layout>
+                </v-flex>
+              </v-layout>
+            </v-flex>
+            <v-flex d-flex xs12 sm6 md6 child-flex>
+              <v-card color="grey darken-2">
+                <v-img src="/images/IMG_5700.JPG"></v-img>
+                <!-- <v-card-text>{{ lorem.slice(0, 90) }}</v-card-text> -->
+              </v-card>
+            </v-flex>
+            <v-flex d-flex xs12 sm6 md6>
+              <v-card color="grey lighten-2">
+                <v-img
+                  class="white--text"
+                  src="/images/overnight-oat.jpg"
+                >
+                  <v-container fill-height fluid>
+                    <v-layout fill-height>
+                      <v-flex xs12 align-end flexbox>
+                        <span class="headline">Overnight oat med elit nutrition</span>
+                      </v-flex>
+                    </v-layout>
+                  </v-container>
+                </v-img>
+                <!-- <v-card-text>{{ lorem.slice(0, 100) }}</v-card-text> -->
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+
+        <v-container grid-list-md text-xs-center>
+          <v-layout row wrap>          
+            <v-flex xl12>
+              <v-card>
+                <v-card-text class="pa-12">
+                  <h2>This is a heading</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel neque at quos aperiam quaerat quidem atque illo illum, perspiciatis consequuntur tenetur ullam iure, similique voluptatibus, harum quisquam. Magni, iure veniam.</p>
+                </v-card-text>
               </v-card>
             </v-flex>
           </v-layout>
@@ -50,32 +136,7 @@ export default {
         subheading: 'An fitness Athlete',
         image: 'header.jpg'
       },
-      frontboxes: [
-        {
-          title: 'OVER NIGHT OATS',
-          premble: 'Letar du efter en fitnessfrukost? Denna är baserad på proteinpulver och havregryn...',
-          button: 'Läs receptet',
-          url: 'kostrad',
-          color: 'light-blue darken-1',
-          btnColor: 'light-blue darken-4'
-        },
-        {
-          title: 'LÄR DIG GÖRA CHINS',
-          premble: 'Här får du mina bästa tips för att lära dig göra chins eller pullups...',
-          button: 'Läs mina tips',
-          url: 'traningstips',
-          color: 'teal darken-1',
-          btnColor: 'teal darken-4'
-        },
-        {
-          title: 'ICANIWILL',
-          premble: 'Använd min kod: RICKARDB15 så får du 15% rabatt på träningskläder hos ICANIWILL',
-          button: 'HANDLA NU',
-          url: 'https://click.adrecord.com/?c=28930&p=886',
-          color: 'cyan darken-1',
-          btnColor: 'cyan darken-4'
-        },
-      ]
+      lorem: `Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.`
     }
   },
   components: {

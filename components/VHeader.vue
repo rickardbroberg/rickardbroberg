@@ -92,12 +92,5 @@ export default {
 </script>
 
 <style>
-body{
-  background-color:#212121;
-  color:#eeeded;
-}
-.head {
-  float:left;
-  width: 100%;
-}
+
 </style>

@@ -22,8 +22,16 @@
 
 
 <style>
+@font-face {
+font-family: 'Acherus Grotesque Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Acherus Grotesque Regular'), url('/assets/acherus_grotesque_-_regular.woff') format('woff');
+}
+
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
+  font-family:'Acherus Grotesque Regular', "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -37,6 +45,5 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
 </style>
 
