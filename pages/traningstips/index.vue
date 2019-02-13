@@ -2,35 +2,13 @@
     <div>
       <vheader v-bind="header"/>
       
-      <v-container
-        grid-list-xl
-      >
-        <v-layout wrap>
-          <v-flex xs12>
-
-            <v-card>
-              <v-img
-                class="white--text"
-                height="200px"
-                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-              >
-                <v-container fill-height fluid>
-                  <v-layout fill-height>
-                    <v-flex xs12 align-end flexbox>
-                      <span class="headline">Top 10 Australian beaches</span><br>
-                      <span class="grey--text">Number 10</span><br>
-                      <span>Whitehaven Beach</span><br>
-                      <span>Whitsunday Island, Whitsunday Islands</span><br>
-                      <v-btn flat color="orange">Share</v-btn>  
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-img>
-            </v-card>
-
-          </v-flex>
-        </v-layout>
-      </v-container>
+      <section flex row class="workouts">
+        <article class="workout">
+          <div></div>
+          <h1>Title</h1>
+          <p>premble</p>
+        </article>
+      </section>
       <vfooter/>
     </div>
 </template>
@@ -82,11 +60,16 @@ export default {
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;  
+<style scoped>
+.workouts{
+  
 }
-
+.workout{
+  box-sizing: border-box;
+  width: 280px;
+  padding: 8px;
+  border: 1px solid #000;
+  box-shadow: 0 2px 2px #000;
+}
 </style>
 

@@ -114,17 +114,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import Vuetify from 'vuetify'
-
-Vue.use(Vuetify, {
-  iconfont: 'fa4'
-})
-
-import 'vuetify/dist/vuetify.min.css'
-import 'font-awesome/css/font-awesome.min.css'
-
-import Vheader from '~/components/VHeader.vue'
 import VStartHeader from '~/components/VStartHeader.vue'
 import Vfooter from '~/components/VFooter.vue'
 
@@ -140,7 +129,6 @@ export default {
     }
   },
   components: {
-    Vheader,
     VStartHeader,
     Vfooter
   }
