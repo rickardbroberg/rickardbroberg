@@ -1,51 +1,8 @@
 <template>
   <div>
-  <v-navigation-drawer
-      :clipped="drawer.clipped"
-      :fixed="drawer.fixed"
-      v-model="drawer.open"
-      app
-      dark
-    >
-      <v-list>
-        <v-list-tile
-        v-for="item in items"
-        :key="item.title"
-        :href="item.url"
-      >
-        <v-list-tile-action>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-tile-action>
-        <v-list-tile-content>
-          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-        </v-list-tile-content>
-      </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    
-    <v-toolbar
-      app
-      dark
-      color="grey darken-4"
-      :fixed="toolbar.fixed"
-      :clipped-left="toolbar.clippedLeft"
-    >
-      <v-toolbar-side-icon 
-        @click.stop="toggleDrawer"
-      ></v-toolbar-side-icon>
-        <v-toolbar-title>Rickard Broberg</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn href="/" flat>
-            <v-icon>fa-home</v-icon>
-        </v-btn>
-        <v-btn href="traningstips" flat>Träningstips</v-btn>
-        <v-btn href="kostrad" flat>Kostråd</v-btn>
-        <v-btn href="https://www.instagram.com/rickardbroberg" flat>
-          <v-icon>fa-instagram</v-icon>
-        </v-btn>
-        </v-toolbar-items>
-    </v-toolbar>
+  
+  <v-sidebar />
+  
    <div id="hero">
         <video playsinline autoplay muted loop poster="/placeholder.png" id="bgvideo" width="100%">
             <source src="/abs-ball-deluxe.mp4" type="video/mp4">
@@ -83,21 +40,16 @@
 
 
 <script>
+import VSidebar from '~/components/VSidebar.vue'
+
 export default {
-  data: () => ({
-    items: [
-      { title: 'Start', icon: 'fa-home', url: '/' },
-      { title: 'Träningstips', icon: 'fa-bomb', url: 'traningstips' },
-      { title: 'Kostråd', icon: 'fa-cutlery', url: 'kostrad' },
-      { title: 'Bio', icon: 'fa-cube', url: 'om' },
-      { title: 'Instagram', icon: 'fa-instagram', url: 'https://www.instagram.com/rickardbroberg' },
-    ],  
+  data: () => ({ 
     frontboxes: [
         {
             title: 'OVER NIGHT OATS',
             premble: 'Letar du efter en fitnessfrukost? Denna är baserad på proteinpulver och havregryn...',
             button: 'Läs receptet',
-            url: 'kostrad',
+            url: 'kostrad/overnight-oat-with-proteinpowder',
             color: 'grey lighten-2',
             btnColor: 'grey lighten-1'
         },
@@ -105,7 +57,7 @@ export default {
             title: 'LÄR DIG GÖRA CHINS',
             premble: 'Här får du mina bästa tips för att lära dig göra chins eller pullups...',
             button: 'Läs mina tips',
-            url: 'traningstips',
+            url: 'traningstips/chins-pullups',
             color: 'grey lighten-2',
             btnColor: 'grey lighten-1'
         },
@@ -118,21 +70,11 @@ export default {
             btnColor: 'grey lighten-1'
         },
     ],
-    drawer: {
-      open: false,
-      clipped: true,
-      fixed: true
-    },
-    toolbar: {
-      fixed: true,
-      clippedLeft: true
-    }
   }),
-  methods: {
-    toggleDrawer () {
-        this.drawer.open = !this.drawer.open
-    }
+  components: {
+    VSidebar
   }
+
 
 }
 </script>
